@@ -1,0 +1,100 @@
+<!DOCTYPE HTML>
+<html lang="pl">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Language" content="pl" />
+  <meta name="description" content="Zadanie 1 / IAI WEBCAMP#5" />
+  <meta name="keywords" content="Webcamp, IAI-Shop.com" />
+  <title>Zadanie 2 / IAI WEBCAMP#5</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&amp;subset=latin-ext" rel="stylesheet">
+  <link href="css/font-awesome.css" rel="stylesheet"> 
+
+  <style type="text/css">
+    * {margin: 0; padding: 0; box-sizing: border-box;}
+    body {background: #fff;  font-family: 'Open Sans', 'Arial', sans-serif; background:url('img/bg.png'); }
+
+    header, section, .container {width: 1170px; margin: 0 auto; position: relative;}
+    article, footer {width: 100%;}
+    section {margin-bottom: 50px;}
+    img {max-width: 100%;}
+    a {color: #333; text-decoration: none;}
+  	a:hover {color: #6cc8bf;}
+
+    button {padding: 7px 15px; color: #fff; background: #6cc8bf; display: inline-block; border: none; cursor: pointer; font-family: 'Open Sans', sans-serif; font-size: 0.93em;}
+    button:hover {color: #fff; background: #262626;}
+    input {display: inline-block; padding: 7px 15px; vertical-align: top;}
+    input:focus {outline: 0;}
+
+    /* Zadanie 1 */
+    header {padding: 30px 0 0; margin-bottom: 0px;}
+    header > div {display: inline-block; vertical-align: middle; text-align: center;}
+    header > div:first-of-type {text-align: left; padding-left: 0px; width: 40%;}
+    header > div:nth-of-type(2) {width: 39%}
+    header > div:last-of-type {text-align: right; width: 20%;}
+    header > div input {width: 95%; border: 1px #cccccc solid;  height: 50px; transition: 0.3s all; margin-left: 50px;}
+    header > div input:focus {border: 1px solid #262626; transition: 0.3s all;}
+    header > div > form {position: relative;}
+    header > div > form > button {position: absolute; right: 0; top:9px; background: none; font-size: 1.3em; padding: 0; background: none; color: #333; transition: 0.2s;}
+    header > div > form > button:hover {background: none; color: #76c1d8;}
+    header > div:last-of-type a {font-size: 0.85em; margin: 0 5px;}
+    header > div > div {display: inline-block;}
+    header > div > div a:hover {color: #6cc8bf;}
+    header > div > div a i.fa {display: inline-block; margin-right: 5px; font-size: 1.5em; height: 50px;width: 50px;color: #fff;background: #333; padding: 13px 16px; cursor: pointer; transition: 0.2s;}
+    header > div > div a i.fa:hover {background: #76c1d8;}
+    header > div > div a i.fa-shopping-bag {background-color:#76c1d8; border: 1px #76c1d8 solid;position: relative;}
+    header > div > div a i.fa-shopping-bag:hover {background: #fff; border: 1px #76c1d8 solid; color:#76c1d8;}
+
+    .shopping_cart_count {position: absolute; right: 0; top: 20%; width: 25px; background: #e557a9; text-align: center; height: 25px;}
+    .shopping_cart_count > a > span {color: #fff; font-size: 0.85em;}
+
+    nav {text-align: center; margin-top: 15px; background: #ccc; padding: 10px; position: relative; z-index: 1; margin-bottom: 10px;}
+
+  </style>
+
+</head>
+  <body>
+
+  <header>
+    <div>
+      <a href="/" tilte="IAI WEBCAMP#4 - Zadanie 1">
+        <img src="img/logo.png" alt="IAI WEBCAMP#4 - Zadanie 1" />
+      </a>
+    </div>
+    
+  	<div>
+	  	<form>
+	  		<input placeholder="Czego szukasz?"/>
+	  		<button type="submit"><i class="fa fa-search"></i></button>
+	  	</form>
+  	</div>
+
+  	<div>
+  		<div>
+	  		<a class="login" title="Zaloguj się">
+		  		<i class="fa fa-user"></i>
+		  	</a>
+		  	<a class="favorites" title="Ulubione">
+		  		<i class="fa fa-heart"></i>
+		  	</a>
+	  	</div>
+
+	  	<div class="shopping_cart">
+		  	<a href="/" title="Koszyk">
+		  		<i class="fa fa-shopping-bag"></i>
+		  	</a>
+	  	</div>
+      <div class="shopping_cart_count">
+        <a href='/' title="Przejdz do koszyka">
+          <span>5</span>
+        </a>
+      </div>
+  	</div>
+
+    <nav>
+    	miejsce na menu
+    </nav>
+
+  </header>
+
+  </body>
+</html>

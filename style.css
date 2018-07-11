@@ -1,0 +1,640 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+* {
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+
+.main {
+    width: 100%;
+    margin: 30px auto 0px;
+    max-width: 1170px;
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+    margin-top: 25px;
+}
+
+[class*="col-"] {
+    float: left;
+}
+
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+
+input {
+    padding-left: 15px;
+}
+form{
+    position: relative;
+    margin-top: 15px;
+    margin-left: 35px;
+}
+
+.input-1 {
+    width: 100%;
+    height: 50px;
+    border: 1px solid #444444;
+}
+.button-submit {
+    position: absolute;
+    top: 13px;
+    right: 1px;
+    border: 0;
+    font-size: 18px;
+    color: #474747;
+    background: #fff;
+}
+
+.button-submit fas {
+    background: #fff;
+}
+
+.icons .fas {
+    color: #ffffff;
+    background: #323232;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    padding-top: 15px;
+    font-size: 18px;
+    margin-top: 15px;
+}
+
+.fa-user {
+    margin-left: 20px;
+    margin-right: 8px
+}
+.fa-heart {
+    margin-right: 8px
+}
+
+.icons .fa-shopping-bag {
+    background: #75c1d8;
+}
+
+.icon-bag {
+    position: relative;
+}
+.cart {
+    position: absolute;
+    top: -26px;
+    right: -13px;
+    color: #fff;
+    background: #dc5c9b;
+    font-size: 12px;
+    text-align: center;
+    padding: 4px;
+    height: 23px;
+    width: 23px;
+}
+a {
+    text-decoration: none;
+}
+
+.footer-text {
+    font-size: 12px;
+}
+
+.vertical-img {
+    vertical-align: middle;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* nav  */
+
+.nav {
+    margin-top: 10px;
+    width: 100%;
+}
+
+.nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width:100%;
+    position: relative;
+}
+
+.nav > ul > li {
+    float: left; 
+    height: 30px;
+    margin-right: 20px;
+}
+.nav ul li {
+    text-transform: uppercase;
+}
+
+
+.nav ul > li > a {
+    padding: 15px 20px; 
+    color: #262626;
+    text-decoration: none;
+}
+
+.nav ul > li > a:hover, ul > li:hover > a {
+    color: #fff;
+    background: #323232;
+}
+
+.nav > ul > li > ul {
+    padding: 0;
+    position: absolute; 
+    display: none; 
+    left: 0px; 
+    top: 30px; 
+    text-align: left;
+    background-color: #fcfcfc;
+    -webkit-box-shadow: 0px 7px 37px -5px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 7px 37px -5px rgba(0,0,0,0.75);
+    box-shadow: 0px 7px 37px -5px rgba(0,0,0,0.75);
+    padding: 15px 0;
+    z-index: 999999;
+}
+
+.nav ul li:hover > ul {
+    display: block;
+}
+
+/* .nav ul > li ul li ul {
+    left: 200px; 
+    top: -1px;
+} */
+
+/* .nav ul > li ul li ul:nth-child(2) {
+    left: 400px;
+    top: -1px;
+} */
+.nav ul > li ul li ul li {
+    margin: 0; 
+    padding: 0;
+    float: none; 
+    height: auto;
+    border-left: 1px solid gray;
+    margin-left: 15px;
+}
+
+.nav ul > li ul li ul li a {
+    padding: 10px 20px; 
+    color: #505050; 
+    text-decoration: none;
+    display: block;
+    width: 25%;
+}
+
+.nav ul > li ul li ul li a:hover, .nav ul > li ul li:hover > a {
+        text-decoration: none;
+        color: #fff;
+        background-color: #505050;
+}
+
+.nav ul > li ul li ul li ul {
+    display: none;
+    position: absolute;
+    top: 42px;
+    left: 25%;
+    border-left: none;
+}
+
+.nav ul > li ul li ul li ul li {
+    margin: 0;
+    float: none; 
+    height: auto;
+    border-left: none;
+
+}
+.nav ul > li ul li ul li ul li a {
+    color: #fff;
+    width: 75%;
+    background: #444;
+}
+
+/* slider */
+
+/* slider */
+
+.bx-wrapper {
+    -moz-box-shadow: 0 0 0;
+    -webkit-box-shadow: 0 0 0;
+    box-shadow: 0 0 0;
+    border: none;
+   margin-bottom: 20px;
+    background: #fff;
+}
+
+.bx-wrapper .bx-pager, .bx-wrapper .bx-controls-auto {
+    bottom: 10px;
+}
+
+.bx-wrapper .bx-pager.bx-default-pager a:hover, 
+.bx-wrapper .bx-pager.bx-default-pager a.active, 
+.bx-wrapper .bx-pager.bx-default-pager a:focus {
+    background: #069abb'
+}
+.bx-wrapper .bx-pager.bx-default-pager a {
+    background: #666;
+    text-indent: -9999px;
+    display: block;
+    width: 15px;
+    height: 4px;
+    margin: 0 5px;
+    outline: 0;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 0;
+}
+
+.bx-wrapper .bx-controls-direction a { 
+    width: 65px; 
+    height: 65px;
+    top: 45%;
+    text-indent: 0;
+    font-size: 1.5rem;
+    z-index: 0;
+
+}
+.bx-wrapper .bx-prev {
+    left: 1px;
+    background: #333;
+    /* z-index: 0; */
+}
+
+.bx-wrapper .bx-next {
+    background: #333;
+    right: 1px;
+    /* z-index: 0; */
+}
+
+.bx-wrapper .bx-prev i {
+    padding: 21px 27px 21px 26px;
+    color: #fff;
+}
+
+.bx-wrapper .bx-next i {
+    padding: 21px 27px 21px 26px;
+    color: #fff;
+}
+.buttons {
+    margin: 0 -15px;
+
+}
+
+.buttons a {
+    display: block;
+}
+.buttons img {
+    display: block;
+    /* width: 100%; */
+}
+.buttons .first, .buttons .second, .buttons .third{
+    position: relative;
+    padding: 15px;
+}
+.buttons .col-4 h4 {
+    text-transform: uppercase;
+    position: absolute;
+    top: 20px;
+    left: 15px;
+    color: #fff;
+    background: #333;
+    padding-bottom: 3px;
+    font-size: 1.5rem;
+    width: 80%; 
+}
+
+.buttons .first h4, 
+.buttons .second h4, 
+.buttons .third h4 {
+    overflow: hidden;
+    color: rgba(0, 0, 0, 0);
+}
+.buttons .first h4::after {
+    content: "Nowości";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    transition: all 0.5s, opacity 0.3s;
+    padding-left: 80px;
+}
+.buttons .second h4::after {
+    content: "Promocje";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    transition: all 0.5s, opacity 0.3s;
+    padding-left: 80px;
+}
+.buttons .third h4::after {
+    content: "Bestsellery";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    transition: all 0.5s, opacity 0.3s;
+    padding-left: 80px;
+}
+
+.buttons .first h4::before {
+    content: "Nowości";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: -100%;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    opacity: 0;
+    transition: all 0.5s, opacity 0.3s;
+    padding-left: 80px;
+}
+.buttons .second h4::before {
+    content: "Promocje";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: -100%;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    opacity: 0;
+    transition: all 0.5s, opacity 0.3s;
+    padding-left: 80px;
+}
+.buttons .third h4::before {
+    content: "Bestsellery";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: -100%;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    opacity: 0;
+    transition: all 0.5s, opacity 0.3s;
+    padding-left: 80px;
+}
+
+.buttons .first h4:hover::after, 
+.buttons .second h4:hover::after,  
+.buttons .third h4:hover::after {
+    opacity: 0;
+    transform: translateY(100%);
+}
+.buttons .first h4:hover::before, 
+.buttons .second h4:hover::before,
+.buttons .third h4:hover::before {
+    opacity: 1;
+    transform: translateY(100%);
+}
+
+ .zobacz {
+    position: absolute;
+    bottom: 30px;
+    right: 40px;
+    opacity: 0;
+    font-family: 'Tangerine', cursive;
+    font-size: 1.3em;
+    transition: .5s ease;
+}
+.first:hover .zobacz, .second:hover .zobacz, .third:hover .zobacz   {
+    opacity: 1;
+    position: absolute;
+    bottom: 50px;
+    right: 80px;
+    color: #fff;  
+    transform:rotate(-15deg); 
+    -webkit-transform:rotate(-15deg); 
+    -moz-transform:rotate(-20deg); 
+    -o-transform:rotate(-20deg);   
+    transition: .5s ease;
+}
+
+.header-middle {
+    margin: 0 auto;
+}
+
+.header-middle h2 {
+    text-transform: uppercase;
+    text-align: center; 
+}
+.offer-img {
+    border: 1px solid #eee;
+    padding: 10px;
+    margin: 10px;
+    overflow: hidden;
+}
+
+.offer-img:hover {
+    border: 1px solid #75c1d8 ;
+    padding: 10px;
+    text-transform: uppercase;
+    
+}
+.offer-img img {
+    transition: transform .2s;
+}
+.offer-img img:hover {
+    transform: scale(1.2);
+}
+
+
+.offer .col-3 {
+    text-transform: uppercase;
+    overflow: hidden;
+}
+.offer span {
+    margin-top: 20px;
+    display: block;
+    color: #2c2c2c;
+    font-size: 0.8rem;
+    
+}
+.offer small {
+    font-weight: 800;
+    display: block;
+    font-size: 0.8rem;
+}
+
+.blog h2 {
+    text-transform: uppercase;  
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.blog .title {
+    font-size: 12px;
+    font-weight: 800;
+    
+}
+.blog .title-data {
+    max-height: 35px;
+    padding: 5px 5px 8px 5px;
+}
+.blog data {
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+.blog img {
+    margin-top: 15px;
+}
+
+.blog .desc {
+    font-size: 12px;
+    line-height: 18px;
+    display: block;
+}
+
+.blog img {
+    margin-top: 40px;
+}
+.blog button {
+    background: #333333;
+    color: #fff;
+    margin-top: 12px;
+    padding: 10px;
+    text-transform: uppercase;
+}
+.line {
+    margin-top: 50px;
+    border-top: 1px solid #cdcdcd;
+}
+
+.company-logo {
+    margin-bottom: 40px;
+}
+
+.newsletter {
+    margin-bottom: 50px;
+    background-image: url(img/news_bg.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    padding: 15px 0;
+    height: 150px;
+}
+.newsletter .news h4 {
+    text-transform: uppercase;
+    color: #fff;
+    background: #333;
+    padding: 10px 10px 10px 46px; 
+    font-size: 1.5rem;
+    width: 80%;
+}
+.newsletter form {
+    padding: 10px 10px 10px 0px; 
+    margin-top: 30px;
+}
+
+.newsletter form input[type=email] {
+    width: 235px;
+    height: 40px;
+}
+
+.newsletter form input[type=text] {
+    width: 235px;
+    height: 40px;
+}
+
+.newsletter form button {
+    background: #333;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 13px 18px;
+    border: none;
+}
+
+.newsletter .delete-list {
+    padding: 10px 10px 10px 0px; 
+    margin-top: 40px;
+    
+    
+}
+
+.newsletter .delete-list a {
+    font-size: 12px;
+    color: rgb(255, 255, 255);
+    text-decoration: underline;
+}
+
+.menu-bottom h3 {
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 14px;
+}
+.menu-bottom ul {
+    list-style-type: none;
+    padding-left: 0;
+    text-transform: uppercase;
+    font-size: 12px;
+    line-height: 22px;
+}
+
+.menu-bottom .contact {
+    font-size: 12px;
+
+}
+.menu-bottom .contact a {
+    color: #333;
+    
+}
+
+/* validation newsletter */
+
+.newsletter form {
+    position: relative;
+}
+
+#email-error, #name-error {
+    color: #fff;
+    font-size: 12px;
+    display: block;
+    /* margin-top: 50px; */
+    position: absolute;
+    
+}
+#email-error {
+    bottom: -10px;
+    left: 0;
+}
+#name-error {
+    bottom: -10px;
+    left: 245px;
+}
+
+
+.footer {
+    margin-top: 59px;
+}

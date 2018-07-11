@@ -1,0 +1,843 @@
+<!DOCTYPE HTML>
+<html lang="pl">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="pl" />
+    <meta name="description" content="Zadanie 5 / IAI WEBCAMP#5" />
+    <meta name="keywords" content="Webcamp, IAI-Shop.com" />
+    <title>Zadanie 5 / IAI WEBCAMP#5</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&amp;subset=latin-ext" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Tangerine" rel="stylesheet">
+    <link href="css/font-awesome.css" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+
+    <style type="text/css">
+ 
+    /* Zadanie 1 */
+     * {
+         margin: 0;
+         padding: 0;
+         box-sizing: border-box;
+    }
+     body {
+         background: #fff;
+         font-family: 'Open Sans', 'Arial', sans-serif;
+         background: url('img/bg.png') no-repeat;
+    }
+     header, section, .container {
+         width: 1170px;
+         margin: 0 auto;
+         position: relative;
+         clear: both;
+    }
+     article, footer {
+         width: 100%;
+    }
+     section {
+         margin-bottom: 50px;
+    }
+     img {
+         max-width: 100%;
+    }
+     h1 {
+         text-transform: uppercase;
+         text-align: center;
+         font-weight: 600;
+         margin: 15px 0 30px 0;
+         font-size: 30px;
+    }
+     button {
+         padding: 7px 15px;
+         color: #fff;
+         background: #333;
+         display: inline-block;
+         border: none;
+         cursor: pointer;
+         font-family: 'Open Sans', sans-serif;
+         font-size: 0.80em;
+         text-transform: uppercase;
+    }
+     button:hover {
+         color: #fff;
+         background: #76c1d8;
+    }
+     input {
+         display: inline-block;
+         padding: 7px 15px;
+         vertical-align: top;
+    }
+     input:focus {
+         outline: 0;
+    }
+     header {
+         padding: 30px 0 0;
+         margin-bottom: 0px;
+    }
+     header>div {
+         display: inline-block;
+         vertical-align: middle;
+         text-align: center;
+    }
+     header>div:first-of-type {
+         text-align: left;
+         padding-left: 0px;
+         width: 40%;
+    }
+     header>div:nth-of-type(2) {
+         width: 39% 
+    }
+     header>div:last-of-type {
+         text-align: right;
+         width: 20%;
+    }
+     header>div input {
+         width: 95%;
+         border: 1px #cccccc solid;
+         height: 50px;
+         transition: 0.3s all;
+         margin-left: 50px;
+    }
+     header>div input:focus {
+         border: 1px solid #262626;
+         transition: 0.3s all;
+    }
+     header>div>form {
+         position: relative;
+    }
+     header>div>form>button {
+         position: absolute;
+         right: 0;
+         top: 9px;
+         background: none;
+         font-size: 1.3em;
+         padding: 0;
+         background: none;
+         color: #333;
+         transition: 0.2s;
+    }
+     header>div>form>button:hover {
+         background: none;
+         color: #76c1d8;
+    }
+     header>div:last-of-type a {
+         font-size: 0.85em;
+         margin: 0 5px;
+         text-decoration: none;
+    }
+     header>div>div {
+         display: inline-block;
+    }
+     header>div>div a:hover {
+         color: #76c1d8;
+    }
+     header>div>div a i.fa {
+         display: inline-block;
+         margin-right: 5px;
+         font-size: 1.5em;
+         height: 50px;
+         width: 50px;
+         color: #fff;
+         background: #333;
+         text-align: center;
+         line-height: 50px;
+         cursor: pointer;
+         transition: 0.2s;
+    }
+     header>div>div a i.fa:hover {
+         background: #76c1d8;
+    }
+     header>div>div a i.fa-shopping-bag {
+         background-color: #76c1d8;
+         border: 1px #76c1d8 solid;
+         position: relative;
+    }
+     header>div>div a i.fa-shopping-bag:hover {
+         background: #fff;
+         border: 1px #76c1d8 solid;
+         color: #76c1d8;
+    }
+     .shopping_cart_count {
+         position: absolute;
+         right: 0;
+         top: 20%;
+         width: 25px;
+         background: #e557a9;
+         text-align: center;
+         height: 25px;
+    }
+     .shopping_cart_count>a>span {
+         color: #fff;
+         font-size: 0.85em;
+    }
+    /* Zadanie 2 */
+     nav {
+         text-align: left;
+         margin-top: 15px;
+         position: relative;
+         z-index: 1;
+         margin-bottom: 10px;
+         text-transform: uppercase;
+         font-weight: 600;
+         z-index: 3;
+    }
+     nav ul {
+         list-style: none;
+         padding: 0;
+         margin: 0;
+    }
+     nav a {
+         display: block;
+         text-decoration: none;
+         position: relative;
+    }
+     nav li>a {
+         transition: 0.2s;
+    }
+     nav li:hover>a {
+         color: #fff;
+         background-color: #333;
+         transition: 0.2s;
+    }
+     nav>ul>li>a:not(:only-child):after {
+         content: '\f107';
+         font-family: FontAwesome;
+         margin-left: 5px;
+    }
+     nav>ul>li:hover>a:before {
+         background: #76c1d8 none repeat scroll 0 0;
+         bottom: 0;
+         content: "";
+         display: block;
+         height: 1px;
+         left: 0;
+         position: absolute;
+         width: 100%;
+    }
+     nav>ul>li>a img {
+         display: inline-block;
+         margin-right: 10px;
+         vertical-align: middle;
+    }
+     nav>ul>li>a {
+         text-transform: uppercase;
+         color: #262626;
+         text-decoration: none;
+         display: inline-block;
+         padding: 10px 20px;
+         font-size: 0.93em;
+    }
+     nav>ul>li:last-child>a i {
+         margin-right: 5px;
+    }
+     nav>ul>li:hover>ul {
+         display: block;
+    }
+     nav ul ul {
+         display: none;
+    }
+     nav ul li>ul {
+         position: absolute;
+         left: 0;
+         top: 100%;
+    }
+     nav>ul>li {
+         display: inline-block;
+         margin-right: 20px;
+    }
+     nav>ul>li>ul {
+         position: absolute;
+         left: 0;
+         top: 100%;
+         right: 0;
+         background: #fff;
+         box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+         text-align: left;
+         padding: 0 30px 30px 30px;
+    }
+     nav>ul>li>ul a {
+         color: #262626;
+         font-size: 0.92em;
+    }
+     nav>ul>li>ul>li {
+         display: inline-block;
+         width: 25%;
+         vertical-align: top;
+         text-transform: uppercase;
+    }
+     nav>ul>li>ul>li ul {
+         display: block;
+         vertical-align: top;
+         position: static;
+         box-shadow: none;
+         margin-top: 20px;
+    }
+     nav>ul>li>ul>li ul li {
+         padding-right: 30px;
+    }
+     nav>ul>li>ul>li ul li a {
+         display: block;
+         width: 100%;
+         text-transform: none;
+         padding: 7px 15px;
+         border-left: 1px solid #ddd;
+    }
+     nav>ul>li>ul>li ul li a:hover {
+         background: #333;
+         border-left: 2px solid #76c1d8;
+    }
+    /* Zadanie 3 */
+     section .product {
+         display: inline-block;
+         text-align: center;
+         vertical-align: top;
+         width: 23.4%;
+         margin-right: 20px 
+    }
+     section .product:last-of-type {
+         margin-right: 0;
+    }
+     section .product>* {
+         display: block;
+         text-align: left;
+         font-size: 0.78em 
+    }
+     section .product a {
+         text-transform: uppercase;
+         font-size: 0.85em;
+         color: #262626;
+         text-decoration: none;
+    }
+     section .product a.product-name {
+         text-align: left;
+         width: 85%;
+         font-size: 0.78em;
+         line-height: 1.3;
+         margin-top: 15px;
+    }
+     section .product a:hover {
+         color: #76c1d8;
+    }
+     section .product del {
+         margin-right: 10px;
+         color: #999;
+    }
+     section .product span {
+         color: #76c1d8;
+         font-weight: 600;
+    }
+     section .product-img {
+         border: 1px #ddd solid;
+         padding: 15px;
+    }
+     section .product-img:hover {
+         border: 2px #76c1d8 solid;
+         transition: 0.1s;
+    }
+     .slider_main {
+         margin-bottom: 15px;
+         background: #262626;
+    }
+     .slider_main img {
+         width: 100%;
+    }
+        .slick-dots {text-align: center; position: absolute; left: 0; right: 0; bottom: 5%;}
+    .slick-dots > li button {display: none;}
+    .slick-dots > li:before {content: ""; width: 30px; height: 5px; margin: 10px 5px; background: #ccc; display: block;}
+    .slick-dots > li {display: inline-block; list-style: outside none none; cursor: pointer; }
+    .slick-dots > li.slick-active:before {background: #76c1d8;}
+     .slick-arrow {
+         position: absolute;
+         top: 50%;
+         margin-top: -50px;
+         cursor: pointer;
+         height: 100px;
+         width: 40px;
+         line-height: 50px;
+         background-color: #000;
+         width: 50px;
+         height: 50px;
+         color: #fff;
+         text-align: center;
+         z-index: 2;
+    }
+     .nextArrow {
+         right: 0px;
+    }
+     .prevArrow {
+         left: 0px;
+    }
+    /* Zadanie 4 */
+     section .banner_section {
+         width: 369px;
+         height: 200px;
+         margin-right: 27px;
+         display: inline-block;
+         position: relative;
+         overflow: hidden;
+    }
+     section .banner_section:last-of-type {
+         margin-right: 0px;
+    }
+     section .banner_background {
+         background-color: #333;
+         width: 330px;
+         height: 50px;
+         position: absolute;
+         top: 30px;
+         transform: rotate(2deg);
+         color: #fff;
+         text-align: center;
+         line-height: 50px;
+         font-weight: 700;
+         font-size: 1.8em;
+         text-transform: uppercase;
+    }
+     section .reverse {
+         transform: rotate(-2deg);
+    }
+     section .banner1 {
+         background: url(img/hotspot_banner1.png) no-repeat;
+    }
+     section .banner2 {
+         background: url(img/hotspot_banner2.png) no-repeat;
+    }
+     section .banner3 {
+         background: url(img/hotspot_banner3.png) no-repeat;
+    }
+     section .banner_info {
+         position: absolute;
+         right: 10%;
+         top: 54%;
+         transform: rotate(-9deg);
+         font-family: 'Tangerine', cursive;
+         font-size: 50px;
+         font-weight: 600;
+         color: #fff;
+         transition: transform .8s ease-in-out;
+    }
+     section .banner_info:hover {
+         transform: rotate(0deg);
+    }
+
+    </style>
+    <script type="text/javascript">
+        $(function () {
+            $('.slider_main').slick({
+                infinite: true,
+                dots: true,
+                arrows: true,
+                autoplay: true,
+                fade: true,
+                nextArrow: '<div class="nextArrow"><i class="fa fa-angle-right"></i></div>',
+                prevArrow: '<div class="prevArrow"><i class="fa fa-angle-left"></i></div>'
+            });
+
+            $('.slider_products').slick({
+                infinite: true,
+                autoplay: true,
+                dots: false,
+                fade: true,
+                arrows: false,
+                speed: 300
+            });
+
+            $('.slider_producers').slick({
+                infinite: true,
+                slidesToShow: 8,
+                arrows: false,
+                dots: false,
+                slidesToScroll: 3,
+                autoplay: true,
+                speed: 300
+            });
+
+            $('.tabs a').click(function () {
+                $('.tab_content').hide();
+                var name = $(this).text();
+                var id = name.replace(' ', '_').toLowerCase();
+                var file = 'tabs/' + id + '.html';
+                if (!$(this).hasClass('loaded')) {
+                    $('#' + id).load(file, function () {
+                        //alert('Loaded: '+file);
+                    });
+                }
+                $('#' + id).show();
+                $(this).addClass('active').addClass('loaded');
+
+                return false;
+            })
+
+            $('.tabs a').eq(0).click();
+			
+			$('.banner_info').hover(function () {
+					$(this).parent().parent().animate({opacity: '0.6'});
+					
+				}, function () {
+					$(this).parent().parent().animate({opacity: '1'});
+				}
+			);
+        });
+		
+
+    </script>
+</head>
+
+<body>
+    <header>
+        <div>
+            <a href="/" tilte="IAI WEBCAMP#4 - Zadanie 1">
+                <img src="img/logo.png" alt="IAI WEBCAMP#4 - Zadanie 1" />
+            </a>
+        </div>
+        <div>
+            <form>
+                <input placeholder="Czego szukasz?" />
+                <button type="submit">
+                    <i class="fa fa-search"></i>
+                </button>
+            </form>
+        </div>
+        <div>
+            <div>
+                <a class="login" title="Zaloguj się">
+                    <i class="fa fa-user"></i>
+                </a>
+                <a class="favorites" title="Ulubione">
+                    <i class="fa fa-heart"></i>
+                </a>
+            </div>
+            <div class="shopping_cart">
+                <a href="/" title="Koszyk">
+                    <i class="fa fa-shopping-bag"></i>
+                </a>
+            </div>
+            <div class="shopping_cart_count">
+                <a href='/' title="Przejdz do koszyka">
+                    <span>5</span>
+                </a>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li>
+                    <a href="/" title="Oczy">Oczy</a>
+                    <ul>
+                        <li>
+                            <ul>
+                                <li><a href="/" target="_self">Palety cieni</a></li>
+                                <li><a href="/" target="_self">Cienie do powiek</a></li>
+                                <li><a href="/" target="_self">Cienie w kremie</a></li>
+                                <li><a href="/" target="_self">Eyelinery</a></li>
+                                <li><a href="/" target="_self">Kredki do oczu</a></li>
+                                <li><a href="/" target="_self">Tusze do rzęs</a></li>
+                                <li><a href="/" target="_self">Brwi</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <ul>
+                                <li><a href="/" target="_self">Kredki i flamastry</a></li>
+                                <li><a href="/" target="_self">Pomady, pudry i żele</a></li>
+                                <li><a href="/" target="_self">Zestawy i palety</a></li>
+                                <li><a href="/" target="_self">Szablony i nożyki</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="/" title="Usta">Usta</a>
+                    <ul>
+                        <li>
+                            <ul>
+                                <li><a href="/" target="_self">Pomadki</a></li>
+                                <li><a href="/" target="_self">Matowe pomadki</a></li>
+                                <li><a href="/" target="_self">Konturówki</a></li>
+                                <li><a href="/" target="_self">Błyszczyki</a></li>
+                                <li><a href="/" target="_self">Balsamy</a></li>
+                                <li><a href="/" target="_self">Farbki</a></li>
+                                <li><a href="/" target="_self">Peelingi</a></li>
+
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+
+
+                <li>
+                    <a href="/" title="Twarz">Twarz</a>
+                    <ul>
+                        <li>
+                            <ul>
+                                <li><a href="/" target="_self">Bazy</a></li>
+                                <li><a href="/" target="_self">Bronzery</a></li>
+                                <li><a href="/" target="_self">Korektory</a></li>
+                                <li><a href="/" target="_self">Podkłady</a></li>
+                                <li><a href="/" target="_self">Pudry</a></li>
+                                <li><a href="/" target="_self">Róże</a></li>
+                                <li><a href="/" target="_self">Rozświetlacze</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <ul>
+                                <li><a href="/" target="_self">Podkłady i bazy</a></li>
+                                <li><a href="/" target="_self">Pudry</a></li>
+                                <li><a href="/" target="_self">Korektory</a></li>
+                                <li><a href="/" target="_self">Róże</a></li>
+                                <li><a href="/" target="_self">Kredki</a></li>
+                                <li><a href="/" target="_self">Pędzle</a></li>
+                                <li><a href="/" target="_self">Akcesoria</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="/" title="Ciało">Ciało</a>
+                    <ul>
+                        <li>
+                            <ul>
+                                <li><a href="/" target="_self">Palety i zestawy</a></li>
+                                <li><a href="/" target="_self">Kosmetyki naturalne</a></li>
+                                <li><a href="/" target="_self">Farbki do ciała</a></li>
+                                <li><a href="/" target="_self">Toniki</a></li>
+                                <li><a href="/" target="_self">Serum</a></li>
+                                <li><a href="/" target="_self">Maski</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <ul>
+                                <li><a href="/" target="_self">Demakijaż i oczyszczanie</a></li>
+                                <li><a href="/" target="_self">Peelngi</a></li>
+                                <li><a href="/" target="_self">Toniki</a></li>
+                                <li><a href="/" target="_self">Esencje</a></li>
+                                <li><a href="/" target="_self">Serum</a></li>
+                                <li><a href="/" target="_self">Maski i maski w płacie</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="/" title="Włosy">Włosy</a>
+                    <ul>
+                        <li>
+                            <ul>
+                                <li><a href="/" target="_self">Włosy suche i zniszczone</a></li>
+                                <li><a href="/" target="_self">Włosy tłuste i mieszane</a></li>
+                                <li><a href="/" target="_self">Włosy normalne</a></li>
+                                <li><a href="/" target="_self">Włosy kręcone</a></li>
+                                <li><a href="/" target="_self">Włosy farbowane</a></li>
+                                <li><a href="/" target="_self">Szampony przeciwłupieżowe</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <ul>
+                                <li><a href="/" target="_self">Włosy suche i zniszczone</a></li>
+                                <li><a href="/" target="_self">Włosy tłuste i mieszane</a></li>
+                                <li><a href="/" target="_self">Włosy normalne</a></li>
+                                <li><a href="/" target="_self">Włosy kręcone</a></li>
+                                <li><a href="/" target="_self">Włosy farbowane</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="/" title="Pędzle">Pędzle</a>
+                    <ul>
+                        <li>
+                            <ul>
+                                <li><a href="/" target="_self">Zestawy pędzli</a></li>
+                                <li><a href="/" target="_self">Pędzle do makijażu twarzy</a></li>
+                                <li><a href="/" target="_self">Pędzle do oczu i brwi</a></li>
+                                <li><a href="/" target="_self">Pędzle do makijazu ust</a></li>
+                                <li><a href="/" target="_self">Pędzle do masek i kremów</a></li>
+                                <li><a href="/" target="_self">Pędzle owalne</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <ul>
+                                <li><a href="/" target="_self">Pędzle do makijażu twarzy</a></li>
+                                <li><a href="/" target="_self">Pędzle do makijażu oczu</a></li>
+                                <li><a href="/" target="_self">Zestawy</a></li>
+                                <li><a href="/" target="_self">Akcesoria</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="/" title="Manicure">Manicure</a>
+                    <ul>
+                        <li>
+                            <ul>
+                                <li><a href="/" target="_self">Hi hybrid</a></li>
+                                <li><a href="/" target="_self">Makear</a></li>
+                                <li><a href="/" target="_self">MylaQ</a></li>
+                                <li><a href="/" target="_self">Neonail</a></li>
+                                <li><a href="/" target="_self">Topy i bazy</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <ul>
+                                <li><a href="/" target="_self">Pilniki</a></li>
+                                <li><a href="/" target="_self">Bloki polerskie</a></li>
+                                <li><a href="/" target="_self">Kopytka, radełka i cążki</a></li>
+                                <li><a href="/" target="_self">Formy do paznokci</a></li>
+                                <li><a href="/" target="_self">Waciki</a></li>
+                                <li><a href="/" target="_self">Pędzle do zdobień i sondy</a></li>
+                                <li><a href="/" target="_self">Usuwanie manicure hybrydowego</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="/" title="Dom">Dom</a>
+                    <ul>
+                        <li>
+                            <ul>
+                                <li><a href="/" target="_self">Kosmetyki do kąpieli</a></li>
+                                <li><a href="/" target="_self">Świece zapachowe</a></li>
+                                <li><a href="/" target="_self">Kominki</a></li>
+                                <li><a href="/" target="_self">Zestawy</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <ul>
+                                <li><a href="/" target="_self">Środki czystości</a></li>
+                                <li><a href="/" target="_self">Odświeżacze powietrza</a></li>
+                                <li><a href="/" target="_self">Herbaty</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="/" title="Marka">Marka</a>
+                    <ul>
+                        <li>
+                            <ul>
+                                <li><a href="/" target="_self">M Brush</a></li>
+                                <li><a href="/" target="_self">Nabla</a></li>
+                                <li><a href="/" target="_self">Mizon</a></li>
+                                <li><a href="/" target="_self">Blend it!</a></li>
+                                <li><a href="/" target="_self">theBalm</a></li>
+                                <li><a href="/" target="_self">Beauty Bakerie</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <ul>
+                                <li><a href="/" target="_self">Milani</a></li>
+                                <li><a href="/" target="_self">Make-up Atelier</a></li>
+                                <li><a href="/" target="_self">Hakuro</a></li>
+                                <li><a href="/" target="_self">Neonail</a></li>
+                                <li><a href="/" target="_self">Skin 79</a></li>
+                                <li><a href="/" target="_self">La girl</a></li>
+                                <li><a href="/" target="_self">Revlon</a></li>
+                                <li><a href="/" target="_self">Tangle teezer</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <ul class="slider_main">
+            <li>
+                <a href="/" title="Banner 1">
+                    <img src="img/banner1.png" alt="" />
+                </a>
+            </li>
+            <li>
+                <a href="/" title="Banner 2">
+                    <img src="img/banner2.png" alt="" />
+                </a>
+            </li>
+            <li>
+                <a href="/" title="Banner 3">
+                    <img src="img/banner3.png" alt="" />
+                </a>
+            </li>
+        </ul>
+    </section>
+    <section>
+        <div class="banner1 banner_section">
+            <div class="banner_background">
+                <span>Nowości</span>
+            </div>
+            <a href="/">
+                <span class="banner_info">Zobacz</span>
+            </a>
+        </div>
+        <div class="banner2 banner_section">
+            <div class="banner_background reverse">
+                <a>
+                    <span>Promocje</span>
+                </a>
+            </div>
+            <a href="/">
+                <span class="banner_info">Zobacz</span>
+            </a>
+        </div>
+        <div class="banner3 banner_section">
+            <div class="banner_background">
+                <a>
+                    <span>Bestsellery</span>
+                </a>
+            </div>
+            <a href="/">
+                <span class="banner_info">Zobacz</span>
+            </a>
+        </div>
+    </section>
+    <section>
+        <h1>Sprawdź ofertę</h1>
+        <div class="slider_products">
+            <div>
+                <div class="product">
+                    <a class="product-icon" href="/" title="product1">
+                        <img class="product-img" src="img/product_icon_1.png" />
+                    </a>
+                    <a class="product-name" href="/" title="product1">Retro dress (M)</a>
+                    <div class="product-prices">
+                        <del>125,99 zł</del>
+                        <span>85,99 zł</span>
+                    </div>
+                </div>
+                <div class="product">
+                    <a class="product-icon" href="/" title="product1">
+                        <img class="product-img" src="img/product_icon_2.png" />
+                    </a>
+                    <a class="product-name" href="/" title="product1">Dieter Gerhard (S)</a>
+                    <div class="product-prices">
+                        <del>528,99 zł</del>
+                        <span>485,99 zł</span>
+                    </div>
+                </div>
+                <div class="product">
+                    <a class="product-icon" href="/" title="product1">
+                        <img class="product-img" src="img/product_icon_3.png" />
+                    </a>
+                    <a class="product-name" href="/" title="product1">Retro dress with a long name</a>
+                    <div class="product-prices">
+                        <del>99,99 zł</del>
+                        <span>85,99 zł</span>
+                    </div>
+                </div>
+                <div class="product">
+                    <a class="product-icon" href="/" title="product1">
+                        <img class="product-img" src="img/product_icon_4.png" />
+                    </a>
+                    <a class="product-name" href="/" title="product1">Dieter Gerhard (Super long name and the second line is right now)</a>
+                    <div class="product-prices">
+                        <del>525,99 zł</del>
+                        <span>485,99 zł</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>

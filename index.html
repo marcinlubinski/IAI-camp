@@ -1,0 +1,505 @@
+<!DOCTYPE HTML>
+<html lang="pl">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Language" content="pl" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="Zadanie 1 / IAI WEBCAMP#5" />
+  <meta name="keywords" content="Webcamp, IAI-Shop.com" />
+  <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.0.1/css/all.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&amp;subset=latin-ext" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>  
+  <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.17.0/dist/jquery.validate.js"></script>
+  <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+  <link rel="stylesheet" href="style.css">
+  
+  <script src="js/functions.js"></script>
+  <title>Zadanie 1 / IAI WEBCAMP#5</title>
+
+</head>
+  <body>
+    <div class="main">
+      <!-- header -->
+      <div class="row">
+        <div class="col-5 col-m-6">
+          <img src="img/logo.png" alt="Kosmetyki Reflekt">
+        </div>
+        <div class="col-5 col-m-12">
+          <form action="" >
+            <input class="input-1" class="sfield" type="text" name="searchterm" placeholder="Czego szukasz?">
+            <button class="button-submit" type="submit"><i class="fas fa-search"></i></button>
+          </form>
+        </div>
+        <div class="col-2 col-m-6 icons">
+          <a href="#">
+            <i class="fas fa-user"></i>
+          </a>
+          <a href="#">
+            <i class="fas fa-heart"></i>
+          </a>
+          <a href="#" class="icon-bag">
+            <i class="fas fa-shopping-bag"></i>
+            <span class="cart">5</span>
+          </a>          
+        </div>
+      </div>
+      <!-- end header -->
+
+      <!-- nav -->
+      <div class="row">
+        <div class="col-12 nav">
+          <ul>
+              <li>
+                  <a href="/" title="Oczy">Oczy</a>
+                  <ul>
+                      <li>
+                          <ul>
+                              <li><a href="/" target="_self">Palety cieni</a></li>
+                              <li>
+                                <a href="/" target="_self">Cienie do powiek
+                                  <i class="fas fa-angle-down"></i>
+                                </a>
+                                <ul>
+                                  <li><a href="#">Cienie na dzień</a></li>
+                                  <li><a href="#">Cienie na wieczór</a></li>
+                                  <li><a href="#">Cienie na impreze</a></li>
+                                </ul>
+                              </li>
+                              <li><a href="/" target="_self">Cienie w kremie</a></li>
+                              <li><a href="/" target="_self">Eyelinery</a></li>
+                              <li><a href="/" target="_self">Kredki do oczu</a></li>
+                              <li><a href="/" target="_self">Tusze do rzęs</a></li>
+                              <li><a href="/" target="_self">Brwi</a></li>
+                          </ul>
+                      </li>
+                      <li>
+                          <ul>
+                              <li><a href="/" target="_self">Kredki i flamastry</a></li>
+                              <li><a href="/" target="_self">Pomady, pudry i żele</a></li>
+                              <li><a href="/" target="_self">Zestawy i palety</a></li>
+                              <li><a href="/" target="_self">Szablony i nożyki</a></li>
+                          </ul>
+                      </li>
+                  </ul>
+              </li>
+
+
+                <li>
+                    <a href="/" title="Twarz">Twarz</a>
+                    <ul>
+                        <li>
+                            <ul>
+                                <li><a href="/" target="_self">Bazy</a></li>
+                                <li><a href="/" target="_self">Bronzery</a></li>
+                                <li><a href="/" target="_self">Korektory</a></li>
+                                <li><a href="/" target="_self">Podkłady</a></li>
+                                <li><a href="/" target="_self">Pudry</a></li>
+                                <li><a href="/" target="_self">Róże</a></li>
+                                <li><a href="/" target="_self">Rozświetlacze</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <ul>
+                                <li><a href="/" target="_self">Podkłady i bazy</a></li>
+                                <li><a href="/" target="_self">Pudry</a></li>
+                                <li><a href="/" target="_self">Korektory</a></li>
+                                <li><a href="/" target="_self">Róże</a></li>
+                                <li><a href="/" target="_self">Kredki</a></li>
+                                <li><a href="/" target="_self">Pędzle</a></li>
+                                <li><a href="/" target="_self">Akcesoria</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="/" title="Ciało">Ciało</a>
+                    <ul>
+                        <li>
+                            <ul>
+                                <li><a href="/" target="_self">Palety i zestawy</a></li>
+                                <li><a href="/" target="_self">Kosmetyki naturalne</a></li>
+                                <li><a href="/" target="_self">Farbki do ciała</a></li>
+                                <li><a href="/" target="_self">Toniki</a></li>
+                                <li><a href="/" target="_self">Serum</a></li>
+                                <li><a href="/" target="_self">Maski</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <ul>
+                                <li><a href="/" target="_self">Demakijaż i oczyszczanie</a></li>
+                                <li><a href="/" target="_self">Peelngi</a></li>
+                                <li><a href="/" target="_self">Toniki</a></li>
+                                <li><a href="/" target="_self">Esencje</a></li>
+                                <li><a href="/" target="_self">Serum</a></li>
+                                <li><a href="/" target="_self">Maski i maski w płacie</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="/" title="Włosy">Włosy</a>
+                    <ul>
+                        <li>
+                            <ul>
+                                <li><a href="/" target="_self">Włosy suche i zniszczone</a></li>
+                                <li><a href="/" target="_self">Włosy tłuste i mieszane</a></li>
+                                <li><a href="/" target="_self">Włosy normalne</a></li>
+                                <li><a href="/" target="_self">Włosy kręcone</a></li>
+                                <li><a href="/" target="_self">Włosy farbowane</a></li>
+                                <li><a href="/" target="_self">Szampony przeciwłupieżowe</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <ul>
+                                <li><a href="/" target="_self">Włosy suche i zniszczone</a></li>
+                                <li><a href="/" target="_self">Włosy tłuste i mieszane</a></li>
+                                <li><a href="/" target="_self">Włosy normalne</a></li>
+                                <li><a href="/" target="_self">Włosy kręcone</a></li>
+                                <li><a href="/" target="_self">Włosy farbowane</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="/" title="Pędzle">Pędzle</a>
+                    <ul>
+                        <li>
+                            <ul>
+                                <li><a href="/" target="_self">Zestawy pędzli</a></li>
+                                <li><a href="/" target="_self">Pędzle do makijażu twarzy</a></li>
+                                <li><a href="/" target="_self">Pędzle do oczu i brwi</a></li>
+                                <li><a href="/" target="_self">Pędzle do makijazu ust</a></li>
+                                <li><a href="/" target="_self">Pędzle do masek i kremów</a></li>
+                                <li><a href="/" target="_self">Pędzle owalne</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <ul>
+                                <li><a href="/" target="_self">Pędzle do makijażu twarzy</a></li>
+                                <li><a href="/" target="_self">Pędzle do makijażu oczu</a></li>
+                                <li><a href="/" target="_self">Zestawy</a></li>
+                                <li><a href="/" target="_self">Akcesoria</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="/" title="Manicure">Manicure</a>
+                    <ul>
+                        <li>
+                            <ul>
+                                <li><a href="/" target="_self">Hi hybrid</a></li>
+                                <li><a href="/" target="_self">Makear</a></li>
+                                <li><a href="/" target="_self">MylaQ</a></li>
+                                <li><a href="/" target="_self">Neonail</a></li>
+                                <li><a href="/" target="_self">Topy i bazy</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <ul>
+                                <li><a href="/" target="_self">Pilniki</a></li>
+                                <li><a href="/" target="_self">Bloki polerskie</a></li>
+                                <li><a href="/" target="_self">Kopytka, radełka i cążki</a></li>
+                                <li><a href="/" target="_self">Formy do paznokci</a></li>
+                                <li><a href="/" target="_self">Waciki</a></li>
+                                <li><a href="/" target="_self">Pędzle do zdobień i sondy</a></li>
+                                <li><a href="/" target="_self">Usuwanie manicure hybrydowego</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="/" title="Dom">Dom</a>
+                    <ul>
+                        <li>
+                            <ul>
+                                <li><a href="/" target="_self">Kosmetyki do kąpieli</a></li>
+                                <li><a href="/" target="_self">Świece zapachowe</a></li>
+                                <li><a href="/" target="_self">Kominki</a></li>
+                                <li><a href="/" target="_self">Zestawy</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <ul>
+                                <li><a href="/" target="_self">Środki czystości</a></li>
+                                <li><a href="/" target="_self">Odświeżacze powietrza</a></li>
+                                <li><a href="/" target="_self">Herbaty</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="/" title="Marka">Marka</a>
+                    <ul>
+                        <li>
+                            <ul>
+                                <li><a href="/" target="_self">M Brush</a></li>
+                                <li><a href="/" target="_self">Nabla</a></li>
+                                <li><a href="/" target="_self">Mizon</a></li>
+                                <li><a href="/" target="_self">Blend it!</a></li>
+                                <li><a href="/" target="_self">theBalm</a></li>
+                                <li><a href="/" target="_self">Beauty Bakerie</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <ul>
+                                <li><a href="/" target="_self">Milani</a></li>
+                                <li><a href="/" target="_self">Make-up Atelier</a></li>
+                                <li><a href="/" target="_self">Hakuro</a></li>
+                                <li><a href="/" target="_self">Neonail</a></li>
+                                <li><a href="/" target="_self">Skin 79</a></li>
+                                <li><a href="/" target="_self">La girl</a></li>
+                                <li><a href="/" target="_self">Revlon</a></li>
+                                <li><a href="/" target="_self">Tangle teezer</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+      </div>
+      <!-- end nav -->
+      <!-- slider -->
+    <section class="row">
+        <div class="bxslider">
+            <div><a href="#"><img src="img/banner1.png" title="Funky roots"></a></div>
+            <div><a href="#"><img src="img/banner2.png" title="The long and winding road"></a></div>
+            <div><a href="#"><img src="img/banner3.png" title="Happy trees"></a></div>
+        </div>
+    </section>
+
+    <!-- button -->
+    
+    <div class="buttons row">
+        <div class="col-4 first">
+            <a href="#">
+                <img src="img/hotspot_banner1.png" alt="banner 1">
+                <h4>Nowości</h4>
+                <div class="zobacz">Zobacz</div>
+                
+            </a>
+        </div>
+        <div class="col-4 second">
+            <a href="#">
+                <img src="img/hotspot_banner2.png" alt="banner 2">
+                <h4>Promocje</h4>
+                <div class="zobacz">Zobacz</div>
+            </a>
+        </div>
+        <div class="col-4 third">
+            <a href="#">
+                <img src="img/hotspot_banner3.png" alt="banner 3">
+                <h4>Bestsellery</h4>
+                <div class="zobacz">Zobacz</div>
+            </a>
+        </div>
+    </div>
+
+    <div class="header-middle row">
+        <div class="col-12">
+            <h2>Sprawdź ofertę</h2>
+        </div>
+    </div>
+
+    <div class="offer row">
+        <div class="col-3">
+            <div class="offer-img">
+                <a href=""><img src="img/product_icon_1.png" alt="Product"></a>
+            </div>  
+            <span>Retro Dress (M)</span>
+            <small>85,00 zł</small>
+        </div>
+        <div class="col-3">
+            <div class="offer-img">
+                <a href=""><img src="img/product_icon_2.png" alt="Product"></a>
+            </div>
+            <span>Dieterd Gierhard  </span>
+            <small>155,00 zł</small>
+        </div>
+        <div class="col-3">
+            <div class="offer-img">
+            <a href=""><img src="img/product_icon_3.png" alt="Product"></a>
+            </div>
+            <span>Retro Dress with long hair</span>
+            <small>185,00 zł</small>
+        </div>
+        <div class="col-3">
+        <div class="offer-img">
+                <a href=""><img src="img/product_icon_1.png" alt="Product"></a>
+            </div>
+            <span>Retro Dress (M)</span>
+            <small>85,00 zł</small>
+        </div>
+        <div class="col-3">
+            <div class="offer-img">
+                <a href=""><img src="img/product_icon_2.png" alt="Product"></a>
+            </div>
+            <span>Dieterd Gierhard</span>
+            <small>155,00 zł</small>
+        </div>
+        <div class="col-3">
+            <div class="offer-img">
+                <a href=""><img src="img/product_icon_3.png" alt="Product"></a>
+            </div>
+            <span>Retro Dress with long hair</span>
+            <small>185,00 zł</small>
+        </div>
+    </div>
+    <div class="row">
+            <div class="line"></div>
+        </div>
+    <div class="blog row">
+        <h2>Aktualności</h2>
+        <div class="col-4">
+            <div class="title-data">
+                <div class="title">Dodanie do płatności IAI rewolucyjnego systemu       płatności mobilnej Płacę z IKO</div>
+                <data>12/03/2015</data>
+            </div>  
+            <img src="img/news_banner1.png" alt="">
+            <span class="desc">IAI-Shop podpisało umowę partnerksą z rewolucyjnym systemem płatności mobilnej Płacę z IKO
+                Mobilny sytem płatności jest bezpośrednio zintegrowany z Płatnościami IAI, więc nie musisz podpisywać zadnych dodatkowych umów.
+            </span>
+            <button>Przyczytaj więcej</button>
+        </div>
+        <div class="col-4">
+            <div class="title-data">
+                <div class="title">Wspieramy eBay Rate Tables</div>
+                <data>27/10/2015</data>
+            </div>    
+            <img src="img/news_banner2.png" alt="">
+            <span class="desc">IAI-Shop podpisało umowę partnerksą z rewolucyjnym systemem płatności mobilnej Płacę z IKO
+                Mobilny sytem płatności jest bezpośrednio zintegrowany z Płatnościami IAI, więc nie musisz podpisywać zadnych dodatkowych umów.
+            </span>
+            <button>Przyczytaj więcej</button>
+        </div>
+        <div class="col-4">
+            <div class="title-data">
+                <div class="title">Wydaliśmy pakiet zmian do mechanizmu udostępnienia ofert do integracji </div>
+                <data>12/03/2015</data>
+            </div>    
+            <img src="img/news_banner3.png" alt="">
+            <span class="desc">IAI-Shop podpisało umowę partnerksą z rewolucyjnym systemem płatności mobilnej Płacę z IKO
+                Mobilny sytem płatności jest bezpośrednio zintegrowany z Płatnościami IAI, więc nie musisz podpisywać zadnych dodatkowych umów.
+            </span>
+            <button>Przyczytaj więcej</button>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="line"></div>
+    </div>
+
+    <div class="company-logo row">
+        <div class="col-12">
+            <div class="company-logo-img">
+                <div><img src="img/producer_1.png" alt=""></div>
+                <div><img src="img/producer_2.png" alt=""></div>
+                <div><img src="img/producer_3.png" alt=""></div>
+                <div><img src="img/producer_4.png" alt=""></div>
+                <div><img src="img/producer_5.png" alt=""></div>
+                <div><img src="img/producer_6.png" alt=""></div>
+                <div><img src="img/producer_7.png" alt=""></div>
+                <div><img src="img/producer_8.png" alt=""></div>
+                <div><img src="img/producer_3.png" alt=""></div>
+                <div><img src="img/producer_4.png" alt=""></div>
+                <div><img src="img/producer_5.png" alt=""></div>
+            </div>    
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="newsletter">
+            <div class="news col-3">
+                <h4>Newsletter</h4>
+            </div>
+            <div class="col-7">
+                <form id="newsletter" action="#">
+                    <label class="error" for="email" id="email-error"></label>
+                    <input type="email" id="email" name="email" placeholder="Podaj swój adres email" required>
+                    <label class="name-error" for="email" id="name-error"></label>
+                    <input type="text" name="name" placeholder="Podaj swoje imię" required>
+                    <button type="submit">Zapisz się</button>
+                </form>
+            </div>
+            <div class="delete-list col-2">
+                <a href="#">Wypisz się z newslettera</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="menu-bottom">
+            <div class="col-3">
+                <h3>Informacje</h3>
+                <ul>
+                    <li>Kontakt</li>
+                    <li>Regulamin</li>
+                    <li>Informacje o firmie</li>
+                    <li>Polityka Prywatności</li>
+                    <li>Promocje</li>
+                    <li>Przesyłki na paczkomaty</li>
+                    <li>Mbank raty</li>
+                </ul>
+            </div>
+            <div class="col-3">
+                <h3>Pomoc</h3>
+                <ul>
+                    <li>Mapa strony</li>
+                    <li>Wyszukiwarka</li>
+                    <li>Sprawdź status zamówienia</li>
+                    <li>Odstąpienie od umowy</li>
+                    <li>Nowości</li>
+                </ul>
+            </div>
+            <div class="col-3">
+                <h3>Moje konto</h3>
+                <ul>
+                    <li>Zarejestruj się</li>
+                    <li>Moje zamówienia</li>
+                    <li>Koszyk</li>
+                    <li>Ulubione</li>
+                    <li>Historia transakcji</li>
+                </ul>
+            </div>
+            <div class="contact col-3">
+                <h3>Kontakt z Nami</h3>
+                <div>
+                    <a href="tel:+4822123123">91 422 12 13</a>
+                    <p>Infolinia czynna od pn. - pt. <br>
+                    w godz. 8:00 - 17:00</p>
+                    
+                </div>
+                <h3>E-mail</h3>
+                    <a href="emailto:info@standard-fashion.iai">info@standard-fashion.iai</a>
+            </div>
+        </div>
+    </div>
+
+
+      <!-- footer -->
+      <div class="footer row">
+        <div class="col-4">
+          <span class="footer-text">Obsługujemy płatności:</span>
+          <a href="#">
+            <img class="vertical-img" src="img/dotpay.png" alt="dotpay">
+          </a>
+        </div>
+        <div class="col-6">
+          <span  class="footer-text">Znajdziesz nas na</span>
+          <a href="#">
+            <img class="vertical-img" src="img/social_media.png" alt="">
+          </a>
+          </div>
+        <div class="col-2">
+          <img src="" alt="">
+        </div>
+      </div>  
+    </div>
+    
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+  </body>
+</html>
